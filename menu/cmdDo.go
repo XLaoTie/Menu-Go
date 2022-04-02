@@ -2,9 +2,9 @@ package menu
 import "fmt"
 
 //指令操作相关
-type cmd_help struct {
+type Cmd_help struct {
 }
-func (this cmd_help)do() {
+func (this Cmd_help)do() {
 	fmt.Println("Commands in Menu:")
 	p := List.head
 	for p != nil {
@@ -12,14 +12,14 @@ func (this cmd_help)do() {
 		p = p.next
 	}
 }
-type cmd_quit struct {
+type Cmd_quit struct {
 }
-func (this cmd_quit)do() {
+func (this Cmd_quit)do() {
 	
 	panic("Quit！")
 }
-type cmd_ls struct {
+type Cmd_ls struct {
 }
-func (this cmd_ls)do() {
+func (this Cmd_ls)do() {
 	fmt.Println("file1, file2, file3.....")
 }
